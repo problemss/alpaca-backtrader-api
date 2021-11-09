@@ -9,7 +9,7 @@ import traceback
 from datetime import datetime, timedelta, time as dtime
 from dateutil.parser import parse as date_parse
 import time as _time
-import trading_calendars
+import exchange_calendars
 import threading
 import asyncio
 
