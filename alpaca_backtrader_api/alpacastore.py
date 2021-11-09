@@ -444,7 +444,7 @@ class AlpacaStore(with_metaclass(MetaSingleton, object)):
             dtend = pd.Timestamp(pytz.timezone('UTC').localize(dtend)) if \
               not dtend.tzname() else dtend
         if granularity == Granularity.Minute:
-            calendar = trading_calendars.get_calendar(name='NYSE')
+            calendar = exchange_calendars.get_calendar(name='NYSE')
             while not calendar.is_open_on_minute(dtend):
                 dtend = dtend.replace(hour=15,
                                       minute=59,
